@@ -1,0 +1,11 @@
+{
+  "name": "maison-des-gateaux",
+  "version": "1.0.0",
+  "description": "Site vitrine pâtisserie artisanale — Thiès, Sénégal",
+  "scripts": {
+    "build": "echo 'Static site — no build step'",
+    "start": "npx serve ."
+  },
+  "keywords": ["patisserie", "thiès", "sénégal"],
+  "license": "UNLICENSED"
+}
