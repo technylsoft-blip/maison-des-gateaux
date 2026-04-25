@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="La Maison des Gâteaux — Pâtisserie artisanale sur-mesure à Thiès depuis 2016. Gâteaux d'anniversaire, de mariage et événementiels conçus avec passion. Commande via WhatsApp, réponse en 2h." />
+  <meta name="theme-color" content="#7c652e" />
+  <meta name="robots"      content="index, follow" />
+  <meta name="author"      content="La Maison des Gâteaux" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="keywords"    content="pâtisserie Thiès, gâteau anniversaire Thiès, gâteau mariage Sénégal, pâtisserie artisanale Thiès, commande gâteau Thiès Sénégal, forêt noire, fraisier" />
+  <meta name="geo.region"    content="SN-TH" />
+  <meta name="geo.placename" content="Thiès, Sénégal" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="La Maison des Gâteaux | Pâtisserie Artisanale Thiès" />
+  <meta name="twitter:description" content="Pâtisserie artisanale sur-mesure depuis 2016 à Thiès. Gâteaux d'anniversaire, de mariage et événementiels, commandés en quelques secondes via WhatsApp." />
+  <meta name="twitter:image"       content="assets/images/hero.jpg" />
+
+  <!-- ═══════════════════════════════════════
+       CONFIGURATION WHATSAPP
+       Remplacer la valeur content par le vrai
+       numéro au format international sans +
+       Exemple France : 33612345678
+  ════════════════════════════════════════ -->
+  <meta name="wa-number" content="221775119318" />
+  <title>La Maison des Gâteaux | Pâtisserie Artisanale Sur-Mesure</title>
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="La Maison des Gâteaux | Pâtisserie Artisanale" />
+  <meta property="og:description" content="À La Maison des Gâteaux, chaque pâtisserie est conçue avec passion, créativité et élégance pour sublimer vos anniversaires, mariages et célébrations." />
+  <meta property="og:image"       content="assets/images/hero.jpg" />
+
+  <link rel="icon"             type="image/png" href="assets/images/logo.png" />
+  <link rel="apple-touch-icon"                  href="assets/images/logo.png" />
+
+  <!-- Préchargement hero (LCP) -->
+  <link rel="preload" as="image" href="assets/images/hero.jpg" fetchpriority="high" />
+
+  <!-- Polices — preconnect + swap déjà inclus dans l'URL -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400;1,600&family=Inter:wght@400;500&display=swap" />
+
+  <link rel="stylesheet" href="styles/main.css" />
+
+  <!-- Données structurées JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "La Maison des Gâteaux",
+    "description": "Pâtisserie artisanale sur-mesure depuis 2016 à Thiès. Gâteaux d'anniversaire, de mariage et événementiels conçus avec passion.",
+    "foundingDate": "2016",
+    "address": { "@type": "PostalAddress", "streetAddress": "Centre-ville", "addressLocality": "Thiès", "addressRegion": "Thiès", "addressCountry": "SN" },
+    "telephone": "+221775119318",
+    "contactPoint": { "@type": "ContactPoint", "telephone": "+221775119318", "contactType": "customer service", "availableLanguage": "fr" },
+    "servesCuisine": ["Pâtisserie", "Gâteaux personnalisés"],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "247", "bestRating": "5" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Nos Créations",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Gâteau d'Anniversaire", "description": "Personnalisé prénom, couleurs, thème" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Gâteau de Mariage", "description": "Wedding cake sur devis personnalisé" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Forêt Noire", "description": "Biscuit chocolat, cerises griottes, crème fouettée" } }
+      ]
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Lien d'évitement (accessibilité) -->
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+  <!-- Barre de progression de lecture -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       1. NAVBAR
+  ═══════════════════════════════════════════════ -->
+  <header class="navbar" id="top">
+    <div class="container navbar__inner">
+
+      <a href="#accueil" class="navbar__logo" aria-label="La Maison des Gâteaux — accueil">
+        <img src="assets/images/logo.png" alt="La Maison des Gâteaux" width="140" height="48" />
+      </a>
+
+      <nav aria-label="Navigation principale">
+        <ul class="navbar__menu" id="navbar-menu" role="list">
+          <li><a href="#a-propos"   class="navbar__link">À propos</a></li>
+          <li><a href="#creations"  class="navbar__link">Nos Gâteaux</a></li>
+          <li><a href="#galerie"    class="navbar__link">Galerie</a></li>
+          <li><a href="#commander"  class="navbar__link">Commander</a></li>
+          <li><a href="#contact"    class="navbar__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Bouton panier -->
+      <button class="cart-btn" id="cart-btn" type="button" aria-label="Voir mon panier (0 article)">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-badge" id="cart-badge" aria-hidden="true" hidden>0</span>
+      </button>
+
+      <button class="navbar__burger" id="navbar-burger" type="button"
+              aria-expanded="false" aria-controls="navbar-menu"
+              aria-label="Ouvrir le menu de navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <main id="main-content" tabindex="-1">
+
+    <!-- ═══════════════════════════════════════════════
+         2. HERO
+    ═══════════════════════════════════════════════ -->
+    <section class="hero" id="accueil">
+      <div class="container hero__inner">
+
+        <!-- Colonne gauche : texte -->
+        <div class="hero__content" data-animate>
+          <span class="hero__overline">Pâtisserie artisanale · Depuis 2016</span>
+
+          <h1 class="hero__title">
+            Des créations gourmandes,
+            <em>faites avec amour</em>
+          </h1>
+
+          <p class="hero__subtitle">
+            Chaque pâtisserie est conçue avec passion, créativité et élégance
+            pour sublimer vos anniversaires, mariages et célébrations — à Thiès et ses environs.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#creations" class="btn btn--primary btn--lg">
+              Nos créations
+            </a>
+            <a href="#commander" class="btn btn--outline btn--lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+              Commander
+            </a>
+          </div>
+
+          <ul class="hero__stats" role="list">
+            <li class="hero__stat">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+              <span>4,9/5 · 247 avis</span>
+            </li>
+            <li class="hero__stat">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <span>Réponse en &lt; 2h</span>
+            </li>
+            <li class="hero__stat">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <span>100% fait maison</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Colonne droite : visuel circulaire -->
+        <div class="hero__visual" data-animate data-delay="1">
+          <div class="hero__circle-wrap">
+            <img src="assets/images/hero.jpg"
+                 alt="Nos créations pâtissières artisanales"
+                 fetchpriority="high" decoding="async"
+                 width="960" height="960" />
+          </div>
+        </div>
+
+      </div>
+
+      <a href="#a-propos" class="hero__scroll" aria-label="Défiler vers la suite">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </a>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         3. À PROPOS
+    ═══════════════════════════════════════════════ -->
+    <section class="apropos" id="a-propos">
+      <div class="container apropos__inner">
+
+        <div class="apropos__media" data-animate>
+          <img src="assets/images/hero.jpg"
+               alt="Notre atelier de pâtisserie artisanale"
+               loading="lazy" decoding="async"
+               width="700" height="525" />
+          <div class="apropos__badge" aria-hidden="true">
+            <strong>+9</strong>
+            <span>ans de passion</span>
+          </div>
+        </div>
+
+        <div class="apropos__content" data-animate data-delay="1">
+          <span class="overline">Notre histoire</span>
+          <h2 class="section-title">
+            Une passion sucrée<br><em>née en 2016</em>
+          </h2>
+
+          <div class="ornament" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
+              <path d="M9 0l2.25 6.75L18 9l-6.75 2.25L9 18l-2.25-6.75L0 9l6.75-2.25z"/>
+            </svg>
+          </div>
+
+          <p class="lead">
+            La Maison des Gâteaux est née d'une passion simple :
+            partager la joie à travers la douceur.
+          </p>
+          <p class="apropos__text">
+            Depuis 2016, nous créons des gâteaux uniques, raffinés et personnalisés
+            pour transformer chaque événement en souvenir inoubliable.
+          </p>
+
+          <ul class="apropos__stats" role="list">
+            <li>
+              <strong>2016</strong>
+              <span>Fondation</span>
+            </li>
+            <li>
+              <strong>100&thinsp;%</strong>
+              <span>Sur-mesure</span>
+            </li>
+            <li>
+              <strong>48&thinsp;h</strong>
+              <span>Délai min.</span>
+            </li>
+          </ul>
+
+          <a href="#commander" class="btn btn--primary">
+            Passer une commande
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         4. NOS PROMESSES
+    ═══════════════════════════════════════════════ -->
+    <section class="promesses bg-beige bg-grain" id="promesses">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="overline" data-animate>Notre engagement</span>
+          <h2 class="section-title" data-animate data-delay="1">Nos Promesses</h2>
+        </div>
+
+        <ul class="promesses__grid" role="list">
+
+          <li class="promesse" data-animate data-delay="1">
+            <div class="promesse__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 48 48" fill="none"
+                   stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M24 8c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8z"/>
+                <path d="M10 40c0-7.7 6.3-14 14-14s14 6.3 14 14"/>
+              </svg>
+            </div>
+            <h3 class="promesse__title">Ingrédients frais et de qualité</h3>
+            <p class="promesse__text">
+              Nous sélectionnons rigoureusement chaque ingrédient pour vous garantir
+              des saveurs authentiques et une fraîcheur irréprochable.
+            </p>
+          </li>
+
+          <li class="promesse" data-animate data-delay="2">
+            <div class="promesse__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 48 48" fill="none"
+                   stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M32 8l8 8-22 22H10V30L32 8z"/>
+                <path d="M28 12l8 8"/>
+              </svg>
+            </div>
+            <h3 class="promesse__title">Designs personnalisés et raffinés</h3>
+            <p class="promesse__text">
+              Chaque création est unique, imaginée sur-mesure pour refléter votre vision
+              et sublimer votre événement.
+            </p>
+          </li>
+
+          <li class="promesse" data-animate data-delay="3">
+            <div class="promesse__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 48 48" fill="none"
+                   stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M6 18h28v18a2 2 0 01-2 2H8a2 2 0 01-2-2V18z"/>
+                <path d="M34 18l6 8v10h-6"/>
+                <circle cx="14" cy="42" r="3"/>
+                <circle cx="36" cy="42" r="3"/>
+              </svg>
+            </div>
+            <h3 class="promesse__title">Service attentif et convivial</h3>
+            <p class="promesse__text">
+              De la commande à la livraison, nous vous accompagnons avec bienveillance
+              pour que chaque détail soit parfait.
+            </p>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         5. NOS CRÉATIONS
+    ═══════════════════════════════════════════════ -->
+    <section class="creations" id="creations">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="overline" data-animate>Nos spécialités</span>
+          <h2 class="section-title" data-animate data-delay="1">Nos Créations du Moment</h2>
+          <p class="section-subtitle" data-animate data-delay="2">
+            Des pâtisseries uniques et raffinées, réalisées avec passion
+            pour sublimer chacun de vos moments précieux.
+          </p>
+        </div>
+
+        <!-- Filtres catégorie -->
+        <div class="creations__filters" role="group" aria-label="Filtrer les créations" data-animate data-delay="2">
+          <button class="filter-tab is-active" type="button" data-filter="all"          aria-pressed="true">Tout</button>
+          <button class="filter-tab"           type="button" data-filter="anniversaire" aria-pressed="false">Anniversaire</button>
+          <button class="filter-tab"           type="button" data-filter="mariage"      aria-pressed="false">Mariage</button>
+          <button class="filter-tab"           type="button" data-filter="evenement"    aria-pressed="false">Événement</button>
+        </div>
+
+        <!-- Grille unifiée -->
+        <ul class="creations__grid" role="list">
+
+          <!-- Anniversaire -->
+          <li data-filter="anniversaire">
+            <article class="card" data-animate data-delay="1">
+              <div class="card__media">
+                <img src="assets/images/gateau-anniversaire.jpg"
+                     alt="Gâteau d'anniversaire personnalisé"
+                     loading="lazy" decoding="async" width="600" height="500" />
+                <div class="card__overlay" aria-hidden="true">
+                  <span class="card__overlay-cta">Voir les options</span>
+                </div>
+                <span class="card__badge card__badge--bestseller">Best-seller</span>
+              </div>
+              <div class="card__body">
+                <span class="card__eyebrow">Anniversaire</span>
+                <h3 class="card__title">Gâteaux d'Anniversaire</h3>
+                <p class="card__desc">
+                  Personnalisé à votre image — prénom, couleurs, thème. De la génoise
+                  légère aux créations multi-étages spectaculaires.
+                </p>
+                <div class="card__footer">
+                  <div class="card__price-wrap">
+                    <span class="card__price-from">À partir de</span>
+                    <span class="card__price">45 FCFA</span>
+                  </div>
+                  <button class="btn btn--primary btn--sm"
+                          data-cart-add="anniversaire" type="button">+ Ajouter</button>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <!-- Mariage -->
+          <li data-filter="mariage">
+            <article class="card" data-animate data-delay="2">
+              <div class="card__media">
+                <img src="assets/images/gateau-mariage.jpg"
+                     alt="Gâteau de mariage élégant"
+                     loading="lazy" decoding="async" width="600" height="500" />
+                <div class="card__overlay" aria-hidden="true">
+                  <span class="card__overlay-cta">Voir les options</span>
+                </div>
+                <span class="card__badge card__badge--devis">Sur devis</span>
+              </div>
+              <div class="card__body">
+                <span class="card__eyebrow">Mariage</span>
+                <h3 class="card__title">Gâteaux de Mariage</h3>
+                <p class="card__desc">
+                  Une création unique qui fera sensation. Choux, macarons ou wedding cake
+                  à plusieurs étages — entièrement sur devis personnalisé.
+                </p>
+                <div class="card__footer">
+                  <div class="card__price-wrap">
+                    <span class="card__price-from">&nbsp;</span>
+                    <span class="card__price">Sur devis</span>
+                  </div>
+                  <button class="btn btn--primary btn--sm"
+                          data-cart-add="mariage" type="button">+ Ajouter</button>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <!-- Événementiel -->
+          <li data-filter="evenement">
+            <article class="card" data-animate data-delay="3">
+              <div class="card__media">
+                <img src="assets/images/gateau-evenement.jpg"
+                     alt="Gâteau pour événement professionnel"
+                     loading="lazy" decoding="async" width="600" height="500" />
+                <div class="card__overlay" aria-hidden="true">
+                  <span class="card__overlay-cta">Voir les options</span>
+                </div>
+                <span class="card__badge card__badge--nouveau">Nouveau</span>
+              </div>
+              <div class="card__body">
+                <span class="card__eyebrow">Événement</span>
+                <h3 class="card__title">Gâteaux Événementiels</h3>
+                <p class="card__desc">
+                  Séminaires, inaugurations, galas — des créations à l'image de votre
+                  marque ou de votre thème, pour toutes les envergures.
+                </p>
+                <div class="card__footer">
+                  <div class="card__price-wrap">
+                    <span class="card__price-from">À partir de</span>
+                    <span class="card__price">80 FCFA</span>
+                  </div>
+                  <button class="btn btn--primary btn--sm"
+                          data-cart-add="evenement" type="button">+ Ajouter</button>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <!-- Forêt Noire -->
+          <li data-filter="anniversaire evenement">
+            <article class="card" data-animate data-delay="1">
+              <div class="card__media">
+                <img src="assets/images/foret-noire.jpg"
+                     alt="Forêt noire traditionnelle"
+                     loading="lazy" decoding="async" width="600" height="500" />
+                <div class="card__overlay" aria-hidden="true">
+                  <span class="card__overlay-cta">Voir les options</span>
+                </div>
+                <span class="card__badge card__badge--bestseller">Best-seller</span>
+              </div>
+              <div class="card__body">
+                <span class="card__eyebrow">Classique alsacien</span>
+                <h3 class="card__title">Forêt Noire</h3>
+                <p class="card__desc">
+                  Biscuit chocolat moelleux, cerises griottes et crème fouettée —
+                  notre version fidèle à la recette traditionnelle.
+                </p>
+                <div class="card__footer">
+                  <div class="card__price-wrap">
+                    <span class="card__price-from">&nbsp;</span>
+                    <span class="card__price">35 FCFA</span>
+                  </div>
+                  <button class="btn btn--primary btn--sm"
+                          data-cart-add="foret" type="button">+ Ajouter</button>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <!-- Fraisier -->
+          <li data-filter="anniversaire mariage evenement">
+            <article class="card" data-animate data-delay="2">
+              <div class="card__media">
+                <img src="assets/images/fraisier.jpg"
+                     alt="Fraisier aux fraises fraîches"
+                     loading="lazy" decoding="async" width="600" height="500" />
+                <div class="card__overlay" aria-hidden="true">
+                  <span class="card__overlay-cta">Voir les options</span>
+                </div>
+                <span class="card__badge card__badge--nouveau">Saison</span>
+              </div>
+              <div class="card__body">
+                <span class="card__eyebrow">Gâteau de saison</span>
+                <h3 class="card__title">Fraisier</h3>
+                <p class="card__desc">
+                  Fraises fraîches de saison, crème mousseline vanille bourbon
+                  et génoise légère imbibée de sirop — un équilibre parfait.
+                </p>
+                <div class="card__footer">
+                  <div class="card__price-wrap">
+                    <span class="card__price-from">&nbsp;</span>
+                    <span class="card__price">38 FCFA</span>
+                  </div>
+                  <button class="btn btn--primary btn--sm"
+                          data-cart-add="fraisier" type="button">+ Ajouter</button>
+                </div>
+              </div>
+            </article>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         6. GALERIE
+    ═══════════════════════════════════════════════ -->
+    <section class="galerie bg-beige bg-grain" id="galerie">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="overline" data-animate>Nos réalisations</span>
+          <h2 class="section-title" data-animate data-delay="1">Un aperçu de nos réalisations</h2>
+        </div>
+
+        <div class="galerie__mosaic">
+
+          <button class="galerie__item galerie__item--tall"
+                  data-src="assets/images/gallery-1.jpg"
+                  data-alt="Création pâtissière 1"
+                  aria-label="Voir en grand"
+                  data-animate>
+            <img src="assets/images/gallery-1.jpg"
+                 alt="Création pâtissière" loading="lazy" decoding="async"
+                 width="600" height="900" />
+            <span class="galerie__zoom" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                <line x1="11" y1="8" x2="11" y2="14"/>
+                <line x1="8" y1="11" x2="14" y2="11"/>
+              </svg>
+            </span>
+          </button>
+
+          <button class="galerie__item"
+                  data-src="assets/images/gallery-2.jpg"
+                  data-alt="Création pâtissière 2"
+                  aria-label="Voir en grand"
+                  data-animate data-delay="1">
+            <img src="assets/images/gallery-2.jpg"
+                 alt="Création pâtissière" loading="lazy" decoding="async"
+                 width="600" height="400" />
+            <span class="galerie__zoom" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                <line x1="11" y1="8" x2="11" y2="14"/>
+                <line x1="8" y1="11" x2="14" y2="11"/>
+              </svg>
+            </span>
+          </button>
+
+          <button class="galerie__item"
+                  data-src="assets/images/gateau-anniversaire.jpg"
+                  data-alt="Gâteau d'anniversaire"
+                  aria-label="Voir en grand"
+                  data-animate data-delay="2">
+            <img src="assets/images/gateau-anniversaire.jpg"
+                 alt="Gâteau anniversaire" loading="lazy" decoding="async"
+                 width="600" height="400" />
+            <span class="galerie__zoom" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                <line x1="11" y1="8" x2="11" y2="14"/>
+                <line x1="8" y1="11" x2="14" y2="11"/>
+              </svg>
+            </span>
+          </button>
+
+          <button class="galerie__item galerie__item--wide"
+                  data-src="assets/images/gateau-mariage.jpg"
+                  data-alt="Gâteau de mariage"
+                  aria-label="Voir en grand"
+                  data-animate data-delay="1">
+            <img src="assets/images/gateau-mariage.jpg"
+                 alt="Gâteau de mariage" loading="lazy" decoding="async"
+                 width="1200" height="600" />
+            <span class="galerie__zoom" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                <line x1="11" y1="8" x2="11" y2="14"/>
+                <line x1="8" y1="11" x2="14" y2="11"/>
+              </svg>
+            </span>
+          </button>
+
+          <button class="galerie__item"
+                  data-src="assets/images/foret-noire.jpg"
+                  data-alt="Forêt noire"
+                  aria-label="Voir en grand"
+                  data-animate data-delay="2">
+            <img src="assets/images/foret-noire.jpg"
+                 alt="Forêt noire" loading="lazy" decoding="async"
+                 width="600" height="400" />
+            <span class="galerie__zoom" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                <line x1="11" y1="8" x2="11" y2="14"/>
+                <line x1="8" y1="11" x2="14" y2="11"/>
+              </svg>
+            </span>
+          </button>
+
+          <button class="galerie__item galerie__item--wide"
+                  data-src="assets/images/fraisier.jpg"
+                  data-alt="Fraisier de saison"
+                  aria-label="Voir en grand"
+                  data-animate data-delay="3">
+            <img src="assets/images/fraisier.jpg"
+                 alt="Fraisier" loading="lazy" decoding="async"
+                 width="1200" height="600" />
+            <span class="galerie__zoom" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                <line x1="11" y1="8" x2="11" y2="14"/>
+                <line x1="8" y1="11" x2="14" y2="11"/>
+              </svg>
+            </span>
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         7. TÉMOIGNAGES
+    ═══════════════════════════════════════════════ -->
+    <section class="temoignages" id="temoignages">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="overline text-white" data-animate>Ils nous font confiance</span>
+          <h2 class="section-title text-white" data-animate data-delay="1">
+            Ce qu'ils en disent
+          </h2>
+        </div>
+
+        <ul class="temoignages__grid" role="list">
+
+          <li class="temoignage" data-animate data-delay="1">
+            <div class="stars" aria-label="5 étoiles sur 5">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+            <blockquote class="quote">
+              Le gâteau d'anniversaire de ma fille était splendide ! Décoration
+              sur-mesure et saveur inoubliable — toute la famille en a été ravie.
+            </blockquote>
+            <footer class="temoignage__author">
+              <div class="temoignage__avatar" aria-hidden="true">F</div>
+              <div class="temoignage__info">
+                <strong>Fatou Diallo</strong>
+                <span>Anniversaire · Thiès</span>
+              </div>
+            </footer>
+          </li>
+
+          <li class="temoignage" data-animate data-delay="2">
+            <div class="stars" aria-label="5 étoiles sur 5">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+            <blockquote class="quote">
+              Notre pièce montée était exactement comme on l'avait rêvée.
+              Travail soigné, livraison ponctuelle et goût exceptionnel. Merci !
+            </blockquote>
+            <footer class="temoignage__author">
+              <div class="temoignage__avatar" aria-hidden="true">M</div>
+              <div class="temoignage__info">
+                <strong>Moussa &amp; Aissatou</strong>
+                <span>Mariage · Thiès</span>
+              </div>
+            </footer>
+          </li>
+
+          <li class="temoignage" data-animate data-delay="3">
+            <div class="stars" aria-label="5 étoiles sur 5">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+            <blockquote class="quote">
+              Commande pour notre séminaire à Thiès. Service impeccable,
+              gâteau magnifique, livraison dans les temps. Je recommande vivement !
+            </blockquote>
+            <footer class="temoignage__author">
+              <div class="temoignage__avatar" aria-hidden="true">O</div>
+              <div class="temoignage__info">
+                <strong>Ousmane Ndiaye</strong>
+                <span>Événement professionnel</span>
+              </div>
+            </footer>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         8. FORMULAIRE COMMANDE
+    ═══════════════════════════════════════════════ -->
+    <section class="commande bg-beige bg-grain" id="commander">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="overline" data-animate>Prêt à commander ?</span>
+          <h2 class="section-title" data-animate data-delay="1">Passez votre commande</h2>
+          <p class="section-subtitle" data-animate data-delay="2">
+            Remplissez le formulaire et recevez une confirmation rapide via WhatsApp.
+          </p>
+        </div>
+
+        <form class="commande__form" id="commande-form" novalidate data-animate data-delay="2">
+
+          <!-- Récapitulatif panier si articles présents -->
+          <div class="commande__cart-preview" id="form-cart-preview" hidden>
+            <div class="commande__cart-header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              Votre sélection
+            </div>
+            <ul class="commande__cart-items" id="form-cart-items"></ul>
+            <div class="commande__cart-total">
+              <span>Total estimé</span>
+              <strong id="form-cart-total">—</strong>
+            </div>
+          </div>
+
+          <div class="form-grid">
+
+            <div class="field">
+              <label class="field__label" for="f-prenom">Prénoms <sup>*</sup></label>
+              <input class="field__input" type="text" id="f-prenom" name="prenom"
+                     placeholder="Fatou" required autocomplete="given-name" />
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="f-tel">Téléphone <sup>*</sup></label>
+              <input class="field__input" type="tel" id="f-tel" name="tel"
+                     placeholder="+221 77 000 00 00" required autocomplete="tel" />
+            </div>
+
+            <div class="field form-full">
+              <label class="field__label" for="f-adresse">Adresse de livraison <sup>*</sup></label>
+              <input class="field__input" type="text" id="f-adresse" name="adresse"
+                     placeholder="Almadies, Dakar" required
+                     autocomplete="street-address" />
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="f-date">Date de livraison <sup>*</sup></label>
+              <input class="field__input" type="date" id="f-date" name="date" required />
+            </div>
+
+            <div class="field form-full">
+              <label class="field__label" for="f-message">Message</label>
+              <textarea class="field__textarea" id="f-message" name="message"
+                        placeholder="Saveurs, décoration, nombre de personnes, occasion spéciale…"></textarea>
+            </div>
+
+          </div>
+
+          <button type="submit" class="btn btn--wa btn--lg commande__submit">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L.057 23.617a.75.75 0 00.918.924l5.909-1.459A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.892 0-3.667-.5-5.2-1.375l-.374-.215-3.874.956.983-3.77-.235-.388A9.938 9.938 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+            </svg>
+            Envoyer ma commande
+          </button>
+
+          <p class="commande__note">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path d="M8 0a8 8 0 100 16A8 8 0 008 0zm.75 11.5h-1.5v-5h1.5v5zm0-6.5h-1.5V3.5h1.5V5z"/>
+            </svg>
+            Données transmises uniquement via WhatsApp · Réponse sous 2 h · Devis gratuit
+          </p>
+
+        </form>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         9. CONTACT
+    ═══════════════════════════════════════════════ -->
+    <section class="contact" id="contact">
+      <div class="container contact__inner">
+
+        <div class="contact__info" data-animate>
+          <span class="overline text-white">Où nous trouver</span>
+          <h2 class="section-title text-white">
+            Parlons de votre<br><em>projet gourmand</em>
+          </h2>
+          <p class="contact__text">
+            Contactez-nous directement via WhatsApp ou retrouvez-nous
+            sur nos réseaux — nous répondons rapidement et avec plaisir.
+          </p>
+
+          <ul class="contact__list" role="list">
+            <li>
+              <span class="contact__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="1.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </span>
+              <span>Grand Standing</span>
+            </li>
+            <li>
+              <span class="contact__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L.057 23.617a.75.75 0 00.918.924l5.909-1.459A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.892 0-3.667-.5-5.2-1.375l-.374-.215-3.874.956.983-3.77-.235-.388A9.938 9.938 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              </span>
+              <a href="https://wa.me/221775119318" target="_blank" rel="noopener noreferrer">
+                WhatsApp : +221 77 511 93 18
+              </a>
+            </li>
+            <li>
+              <span class="contact__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                </svg>
+              </span>
+              <a href="https://www.facebook.com/LaMaisonDesGateaux"
+                 target="_blank" rel="noopener noreferrer">
+                La Maison des Gâteaux
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact__cta" data-animate data-delay="1">
+          <div class="contact__card">
+            <p class="contact__card-label">Commandez directement via</p>
+            <a href="https://wa.me/221775119318?text=Bonjour%2C+je+souhaite+commander+un+g%C3%A2teau+%C3%A0+La+Maison+des+G%C3%A2teaux."
+               class="btn btn--wa btn--lg"
+               target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L.057 23.617a.75.75 0 00.918.924l5.909-1.459A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.892 0-3.667-.5-5.2-1.375l-.374-.215-3.874.956.983-3.77-.235-.388A9.938 9.938 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              Ouvrir WhatsApp
+            </a>
+            <p class="contact__card-note">Réponse garantie sous 2 h</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════
+       10. FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+
+      <div class="footer__brand">
+        <a href="#accueil" aria-label="Retour en haut">
+          <img src="assets/images/logo.png" alt="La Maison des Gâteaux"
+               width="120" height="40" loading="lazy" />
+        </a>
+        <p class="footer__tagline">L'art de sublimer vos moments avec douceur.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navigation pied de page">
+        <ul role="list">
+          <li><a href="#a-propos">À propos</a></li>
+          <li><a href="#creations">Nos Gâteaux</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#temoignages">Avis clients</a></li>
+          <li><a href="#commander">Commander</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <address class="footer__contact">
+        <p>Grand Standing</p>
+        <a href="https://wa.me/221775119318" target="_blank" rel="noopener noreferrer">
+          +221 77 511 93 18
+        </a>
+        <a href="https://www.facebook.com/LaMaisonDesGateaux"
+           target="_blank" rel="noopener noreferrer">
+          Facebook · La Maison des Gâteaux
+        </a>
+      </address>
+
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 La Maison des Gâteaux — L'art de sublimer vos moments avec douceur.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Bouton flottant WhatsApp -->
+  <a href="https://wa.me/221775119318?text=Bonjour%2C+je+souhaite+commander+un+g%C3%A2teau."
+     class="btn-float-wa" id="btn-float-wa"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Commander via WhatsApp"
+     hidden>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L.057 23.617a.75.75 0 00.918.924l5.909-1.459A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.892 0-3.667-.5-5.2-1.375l-.374-.215-3.874.956.983-3.77-.235-.388A9.938 9.938 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
+
+  <!-- Template lightbox (cloné par app.js au clic galerie) -->
+  <template id="lightbox-tpl">
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo en plein écran">
+      <div class="lightbox__backdrop"></div>
+      <div class="lightbox__frame">
+        <button class="lightbox__close" aria-label="Fermer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+        <img class="lightbox__img" src="" alt="" decoding="async" />
+      </div>
+    </div>
+  </template>
+
+  <!-- ═══════════════════════════════════════════════
+       MODALE FINALISATION COMMANDE
+  ═══════════════════════════════════════════════ -->
+  <div class="order-overlay" id="order-overlay" aria-hidden="true"></div>
+
+  <div class="order-modal" id="order-modal"
+       role="dialog" aria-modal="true" aria-labelledby="order-modal-title">
+
+    <div class="order-modal__head">
+      <h2 class="order-modal__title" id="order-modal-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        Finaliser ma commande
+      </h2>
+      <button class="order-modal__close" id="order-modal-close" aria-label="Fermer la fenêtre">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="order-modal__body">
+
+      <!-- Récapitulatif panier -->
+      <div class="order-modal__recap" id="modal-cart-recap"></div>
+
+      <form class="order-modal__form" id="order-modal-form" novalidate>
+        <div class="form-grid">
+
+          <div class="field">
+            <label class="field__label" for="m-prenom">Prénoms <sup>*</sup></label>
+            <input class="field__input" type="text" id="m-prenom" name="prenom"
+                   placeholder="Marie" required autocomplete="given-name" />
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="m-tel">Téléphone <sup>*</sup></label>
+            <input class="field__input" type="tel" id="m-tel" name="tel"
+                   placeholder="+221 70 000 00 00" required autocomplete="tel" />
+          </div>
+
+          <div class="field form-full">
+            <label class="field__label" for="m-adresse">Adresse de livraison <sup>*</sup></label>
+            <input class="field__input" type="text" id="m-adresse" name="adresse"
+                   placeholder="Grand Standing, Dakar" required autocomplete="street-address" />
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="m-date">Date de livraison <sup>*</sup></label>
+            <input class="field__input" type="date" id="m-date" name="date" required />
+          </div>
+
+          <div class="field form-full">
+            <label class="field__label" for="m-message">Message</label>
+            <textarea class="field__textarea" id="m-message" name="message"
+                      placeholder="Saveurs, décoration, nombre de personnes, occasion spéciale…"></textarea>
+          </div>
+
+        </div>
+
+        <button type="submit" class="btn btn--wa btn--lg order-modal__submit">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L.057 23.617a.75.75 0 00.918.924l5.909-1.459A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.892 0-3.667-.5-5.2-1.375l-.374-.215-3.874.956.983-3.77-.235-.388A9.938 9.938 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+          </svg>
+          Envoyer ma commande
+        </button>
+
+        <p class="commande__note">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 0a8 8 0 100 16A8 8 0 008 0zm.75 11.5h-1.5v-5h1.5v5zm0-6.5h-1.5V3.5h1.5V5z"/>
+          </svg>
+          Données transmises uniquement via WhatsApp · Réponse sous 2 h · Devis gratuit
+        </p>
+
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════
+       PANIER — Overlay + Drawer
+  ═══════════════════════════════════════════════ -->
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+
+  <aside class="cart-drawer" id="cart-drawer"
+         role="dialog" aria-modal="true" aria-label="Votre panier">
+
+    <!-- En-tête -->
+    <div class="cart-drawer__head">
+      <h2 class="cart-drawer__title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        Mon Panier
+      </h2>
+      <button class="cart-drawer__close" id="cart-close" aria-label="Fermer le panier">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Liste des articles (injectée par app.js) -->
+    <div class="cart-drawer__body" id="cart-body"></div>
+
+    <!-- Pied : total + CTA (injecté par app.js) -->
+    <div class="cart-drawer__foot" id="cart-foot"></div>
+
+  </aside>
+
+  <script src="scripts/app.js" defer></script>
+</body>
+</html>
