@@ -1107,6 +1107,7 @@ button { cursor: pointer; }
     display:        none;
     position:       fixed;
     inset:          var(--nav-h) 0 0;
+    z-index:        200;
     flex-direction: column;
     align-items:    flex-start;
     gap:            var(--s-1);

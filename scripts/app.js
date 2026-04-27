@@ -542,23 +542,19 @@ function initCart() {
     if (e.key === 'Escape' && drawer?.classList.contains('is-open')) closeDrawer();
   });
 
-  /* Boutons "Ajouter au panier" sur les cards */
-  document.querySelectorAll('[data-cart-add]').forEach(button => {
-    button.addEventListener('click', () => {
-      const id = button.dataset.cartAdd;
-      if (!CATALOG[id]) return;
+  /* Boutons "Ajouter au panier" — délégation globale (couvre toutes les sections) */
+  document.addEventListener('click', e => {
+    const button = e.target.closest('[data-cart-add]');
+    if (!button) return;
+    const id = button.dataset.cartAdd;
+    if (!CATALOG[id]) return;
 
-      cartAdd(id);
-      renderBadge();
-      renderCart();
-
-      /* Feedback visuel */
-      showToast(CATALOG[id].name);
-      flashBadge();
-
-      /* Ouvrir le drawer uniquement sur desktop */
-      if (window.innerWidth >= 768) openDrawer();
-    });
+    cartAdd(id);
+    renderBadge();
+    renderCart();
+    showToast(CATALOG[id].name);
+    flashBadge();
+    if (window.innerWidth >= 768) openDrawer();
   });
 
   /* Rendu initial (restaure le panier depuis localStorage) */
