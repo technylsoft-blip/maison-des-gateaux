@@ -366,6 +366,7 @@
   overflow:     hidden;
   aspect-ratio: 4/3;
   flex-shrink:  0;
+  background:   #f5ede0;
 }
 .card__media img {
   width:      100%;

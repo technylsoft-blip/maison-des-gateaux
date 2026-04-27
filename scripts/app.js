@@ -17,13 +17,31 @@ const WA_NUMBER = document.querySelector('meta[name="wa-number"]')?.content || '
    price: null = sur devis (inclus dans le panier, sans calcul prix)
 ──────────────────────────────────────────────────────────────── */
 const CATALOG = {
-  anniversaire: { name: "Gâteau d'Anniversaire",  price: 45   },
-  mariage:      { name: "Gâteau de Mariage",       price: null },
-  evenement:    { name: "Gâteau Événementiel",     price: 80   },
-  foret:          { name: "Forêt Noire",              price: 35   },
-  fraisier:       { name: "Fraisier",                 price: 38   },
-  caketopper:   { name: "Cake Topper Personnalisé", price: 2500 },
-  figurine:     { name: "Figurine pour Gâteaux",    price: 3500 },
+  /* ── Anniversaire ── */
+  anniversaire:  { name: "Gâteau d'Anniversaire",               price: 15000 },
+  foret:         { name: "Forêt Noire",                          price: 12000 },
+  fraisier:      { name: "Fraisier",                             price: 14000 },
+  gateau_chiffre:{ name: "Gâteau en Forme de Chiffre",           price: 8000  },
+  gateau_lettre: { name: "Gâteau en Forme de Lettre",            price: 8000  },
+  poupee_bleu:   { name: "Gâteau Poupée Bleu",                   price: 15000 },
+  poupee_rose:   { name: "Gâteau Poupée Rose",                   price: 15000 },
+  figurines:     { name: "Gâteau avec Figurines ou Inscriptions", price: 12000 },
+  glacage1:      { name: "Gâteau avec Glaçage 1",                price: 7500  },
+  glacage2:      { name: "Gâteau avec Glaçage 2",                price: 9000  },
+  pate3d:        { name: "Gâteau Pâte à Sucre — Décorations 3D", price: 18000 },
+  gateau_photos: { name: "Gâteau avec Photos",                   price: 10000 },
+  decore:        { name: "Gâteaux Décorés — Pâte à Sucre",       price: 15000 },
+  /* ── Mariage ── */
+  mariage:       { name: "Gâteau de Mariage",                    price: null  },
+  mariage2:      { name: "Gâteau de Mariage Prestige",           price: null  },
+  /* ── Événement ── */
+  evenement:     { name: "Gâteau Événementiel",                  price: 20000 },
+  buche:         { name: "Bûche de Noël",                        price: 12000 },
+  communion:     { name: "Gâteau de Communion",                  price: 15000 },
+  pate_evenement:{ name: "Gâteau Pâte à Sucre Événement",        price: null  },
+  /* ── Impression ── */
+  caketopper:    { name: "Cake Topper Personnalisé",             price: 2500  },
+  figurine:      { name: "Figurine pour Gâteaux",                price: 3500  },
 };
 
 /* ────────────────────────────────────────────────────────────────
@@ -757,14 +775,12 @@ function initRipple() {
    ================================================================ */
 function initFilters() {
   const tabs  = document.querySelectorAll('.filter-tab');
-  const items = document.querySelectorAll('.creations__grid > [data-filter]');
+  const items = document.querySelectorAll('.creations__grid > [data-category]');
   if (!tabs.length || !items.length) return;
 
   const applyFilter = filter => {
     items.forEach(item => {
-      /* data-filter peut contenir plusieurs catégories séparées par des espaces */
-      const cats  = (item.dataset.filter || '').split(' ');
-      const match = filter === 'all' || cats.includes(filter);
+      const match = filter === 'all' || item.dataset.category === filter;
 
       item.hidden = !match;
 
