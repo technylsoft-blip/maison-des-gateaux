@@ -38,12 +38,16 @@
   <!-- Préchargement hero (LCP) -->
   <link rel="preload" as="image" href="assets/images/hero.jpg" fetchpriority="high" />
 
+  <!-- DNS prefetch tiers -->
+  <link rel="dns-prefetch" href="//wa.me" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
   <!-- Polices — preconnect + swap déjà inclus dans l'URL -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400;1,600&family=Inter:wght@400;500&display=swap" />
 
-  <link rel="stylesheet" href="styles/main.css?v=4" />
+  <link rel="stylesheet" href="styles/main.css?v=5" />
 
   <!-- Données structurées JSON-LD -->
   <script type="application/ld+json">
@@ -53,18 +57,25 @@
     "name": "La Maison des Gâteaux",
     "description": "Pâtisserie artisanale sur-mesure depuis 2016 à Thiès. Gâteaux d'anniversaire, de mariage et événementiels conçus avec passion.",
     "foundingDate": "2016",
+    "image":       "assets/images/hero.jpg",
+    "priceRange":  "$$",
     "address": { "@type": "PostalAddress", "streetAddress": "Centre-ville", "addressLocality": "Thiès", "addressRegion": "Thiès", "addressCountry": "SN" },
     "telephone": "+221775119318",
     "contactPoint": { "@type": "ContactPoint", "telephone": "+221775119318", "contactType": "customer service", "availableLanguage": "fr" },
     "servesCuisine": ["Pâtisserie", "Gâteaux personnalisés"],
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "20:00" }
+    ],
     "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "247", "bestRating": "5" },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Nos Créations",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Gâteau d'Anniversaire", "description": "Personnalisé prénom, couleurs, thème" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Gâteau de Mariage", "description": "Wedding cake sur devis personnalisé" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Forêt Noire", "description": "Biscuit chocolat, cerises griottes, crème fouettée" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Gâteau d'Anniversaire",        "description": "Personnalisé prénom, couleurs, thème" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Gâteau de Mariage",            "description": "Wedding cake sur devis personnalisé" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Forêt Noire",                  "description": "Biscuit chocolat, cerises griottes, crème fouettée" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Cake Topper Personnalisé",     "description": "Décoration imprimée sur mesure pour gâteau" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Gâteau Pâte à Sucre 3D",      "description": "Sculptures artisanales en sucre, créations d'exception" } }
       ]
     }
   }
@@ -213,7 +224,7 @@
                loading="lazy" decoding="async"
                width="700" height="525" />
           <div class="apropos__badge" aria-hidden="true">
-            <strong>+9</strong>
+            <strong>+10</strong>
             <span>ans de passion</span>
           </div>
         </div>
@@ -352,7 +363,9 @@
         </div>
 
         <!-- Grille unifiée -->
-        <ul class="creations__grid" role="list">
+        <ul class="creations__grid" role="list"
+            aria-live="polite" aria-atomic="false"
+            aria-label="Produits filtrés">
 
           <!-- ─── ANNIVERSAIRE ──────────────────────────── -->
 
@@ -1272,7 +1285,7 @@
                   <circle cx="12" cy="10" r="3"/>
                 </svg>
               </span>
-              <span>Grand Standing</span>
+              <span>Centre-ville, Thiès</span>
             </li>
             <li>
               <span class="contact__icon" aria-hidden="true">
@@ -1333,6 +1346,7 @@
         <ul role="list">
           <li><a href="#a-propos">À propos</a></li>
           <li><a href="#creations">Nos Gâteaux</a></li>
+          <li><a href="#impression">Impression</a></li>
           <li><a href="#galerie">Galerie</a></li>
           <li><a href="#temoignages">Avis clients</a></li>
           <li><a href="#commander">Commander</a></li>
@@ -1341,7 +1355,7 @@
       </nav>
 
       <address class="footer__contact">
-        <p>Grand Standing</p>
+        <p>Centre-ville, Thiès</p>
         <a href="https://wa.me/221775119318" target="_blank" rel="noopener noreferrer">
           +221 77 511 93 18
         </a>
@@ -1437,7 +1451,7 @@
           <div class="field form-full">
             <label class="field__label" for="m-adresse">Adresse de livraison <sup>*</sup></label>
             <input class="field__input" type="text" id="m-adresse" name="adresse"
-                   placeholder="Grand Standing, Dakar" required autocomplete="street-address" />
+                   placeholder="Centre-ville, Thiès" required autocomplete="street-address" />
           </div>
 
           <div class="field">
@@ -1510,6 +1524,6 @@
 
   </aside>
 
-  <script src="scripts/app.js?v=5" defer></script>
+  <script src="scripts/app.js?v=6" defer></script>
 </body>
 </html>

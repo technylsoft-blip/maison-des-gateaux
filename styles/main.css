@@ -742,9 +742,7 @@ button { cursor: pointer; }
                  transform var(--t-base);
 }
 .temoignage:hover {
-  transform: translateY(-3px);
-}
-.temoignage:hover {
+  transform:    translateY(-3px);
   background:   rgba(255,255,255,0.08);
   border-color: rgba(201,182,109,0.25);
 }
@@ -1136,8 +1134,8 @@ button { cursor: pointer; }
   /* Promesses — 1 colonne */
   .promesses__grid { grid-template-columns: 1fr; max-width: 480px; margin-inline: auto; }
 
-  /* Créations — 1 colonne */
-  .creations__grid { grid-template-columns: 1fr; }
+  /* Créations — 2 colonnes tablette (19 produits = 1 colonne serait inutilisable) */
+  .creations__grid { grid-template-columns: repeat(2, 1fr); }
 
   /* Galerie — simplifiée */
   .galerie__mosaic {
@@ -1148,8 +1146,8 @@ button { cursor: pointer; }
   .galerie__item:nth-child(4) { grid-column: auto; grid-row: auto; }
   .galerie__item:nth-child(6) { grid-column: auto; grid-row: auto; }
 
-  /* Témoignages — 1 colonne */
-  .temoignages__grid { grid-template-columns: 1fr; }
+  /* Témoignages — 2 colonnes tablette */
+  .temoignages__grid { grid-template-columns: repeat(2, 1fr); }
 
   /* Contact */
   .contact__inner {
@@ -1181,7 +1179,8 @@ button { cursor: pointer; }
 
   .apropos__stats { gap: var(--s-5); }
 
-  .creations__grid  { gap: var(--gap-sm); }
+  .creations__grid    { gap: var(--gap-sm); grid-template-columns: 1fr; }
+  .temoignages__grid  { grid-template-columns: 1fr; }
 
   .galerie__mosaic {
     grid-template-columns: 1fr;
@@ -1893,12 +1892,173 @@ button { cursor: pointer; }
 
 
 /* ================================================================
+   MICRO-ANIMATION — SHIMMER BOUTON PRIMARY
+   ================================================================ */
+
+.btn--primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--primary::before {
+  content:        '';
+  position:       absolute;
+  top:            0;
+  left:           -80%;
+  width:          55%;
+  height:         100%;
+  background:     linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.20) 50%,
+    transparent 100%
+  );
+  transform:      skewX(-18deg);
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  .btn--primary:hover::before {
+    animation: btn-shimmer 0.6s ease forwards;
+  }
+}
+
+@keyframes btn-shimmer {
+  to { left: 140%; }
+}
+
+
+/* ================================================================
+   MICRO-ANIMATION — ICÔNE PROMESSE HOVER
+   ================================================================ */
+
+.promesse__icon {
+  transition: transform var(--t-base), background var(--t-base),
+              color var(--t-base), border-color var(--t-base),
+              box-shadow var(--t-base);
+}
+
+.promesse:hover .promesse__icon {
+  transform:    translateY(-5px) scale(1.1);
+  background:   var(--or);
+  color:        var(--white);
+  border-color: var(--or);
+  box-shadow:   var(--shadow-gold);
+}
+
+
+/* ================================================================
+   MICRO-ANIMATION — UNDERLINE SECTION TITLE
+   ================================================================ */
+
+.section-title[data-animate]::after {
+  content:       '';
+  display:       block;
+  height:        2px;
+  width:         0;
+  background:    linear-gradient(to right, var(--or-light), var(--or), var(--or-light));
+  margin:        var(--s-3) auto 0;
+  border-radius: var(--r-full);
+  transition:    width 0.65s 0.2s var(--ease-out);
+}
+
+.section-title[data-animate].is-visible::after {
+  width: 52px;
+}
+
+
+/* ================================================================
+   MICRO-ANIMATION — NAVBAR LIEN ACTIF
+   ================================================================ */
+
+.navbar__link.is-active {
+  color: var(--or);
+}
+
+.navbar__link.is-active::after {
+  width: 100%;
+}
+
+.navbar.scrolled .navbar__link.is-active { color: var(--or); }
+
+
+/* ================================================================
+   MICRO-ANIMATION — CARD OVERLAY CTA ARROW
+   ================================================================ */
+
+.card__overlay-cta::after {
+  content:    ' →';
+  display:    inline-block;
+  transition: transform var(--t-fast);
+}
+
+.card:hover .card__overlay-cta::after {
+  transform: translateX(4px);
+}
+
+
+/* ================================================================
+   MICRO-ANIMATION — TEMOIGNAGE QUOTE MARK
+   ================================================================ */
+
+.temoignage .quote::before {
+  content:     '\201C';
+  display:     block;
+  font-family: var(--font-display);
+  font-size:   var(--text-3xl);
+  color:       var(--or-light);
+  opacity:     0.4;
+  line-height: 0.8;
+  margin-bottom: var(--s-2);
+  transition:  opacity var(--t-base);
+}
+
+.temoignage:hover .quote::before {
+  opacity: 0.7;
+}
+
+
+/* ================================================================
+   MICRO-ANIMATION — APROPOS STATS HOVER
+   ================================================================ */
+
+.apropos__stats li {
+  transition: transform var(--t-spring);
+}
+
+.apropos__stats li:hover {
+  transform: translateY(-3px);
+}
+
+.apropos__stats strong {
+  transition: color var(--t-base);
+}
+
+.apropos__stats li:hover strong {
+  color: var(--choco-deep);
+}
+
+
+/* ================================================================
+   MICRO-ANIMATION — FILTER TAB ACTIVE PRESS
+   ================================================================ */
+
+.filter-tab:active {
+  transform: scale(0.91);
+}
+
+
+/* ================================================================
    NETTOYAGE — REDUCED MOTION GLOBAL
    ================================================================ */
 
 @media (prefers-reduced-motion: reduce) {
-  .hero__circle-wrap { animation: none !important; }
-  .card__badge--bestseller { animation: none !important; }
-  .scroll-progress { transition: none; }
-  [data-animate] { transition-duration: 0.01ms !important; }
+  .hero__circle-wrap             { animation: none !important; }
+  .card__badge--bestseller       { animation: none !important; }
+  .scroll-progress               { transition: none; }
+  [data-animate]                 { transition-duration: 0.01ms !important; }
+  .btn--primary::before          { display: none; }
+  .promesse__icon                { transition: none; }
+  .section-title[data-animate]::after { transition: none; width: 52px; }
+  .apropos__stats li             { transition: none; }
 }
