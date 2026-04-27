@@ -22,8 +22,8 @@ const CATALOG = {
   evenement:    { name: "Gâteau Événementiel",     price: 80   },
   foret:          { name: "Forêt Noire",              price: 35   },
   fraisier:       { name: "Fraisier",                 price: 38   },
-  'cake-topper':  { name: "Cake Topper Personnalisé", price: 2500 },
-  'figurine-gateau': { name: "Figurine pour Gâteaux", price: 3500 },
+  caketopper:   { name: "Cake Topper Personnalisé", price: 2500 },
+  figurine:     { name: "Figurine pour Gâteaux",    price: 3500 },
 };
 
 /* ────────────────────────────────────────────────────────────────
@@ -546,7 +546,7 @@ function initCart() {
   document.addEventListener('click', e => {
     const button = e.target.closest('[data-cart-add]');
     if (!button) return;
-    const id = button.dataset.cartAdd;
+    const id = button.getAttribute('data-cart-add');
     if (!CATALOG[id]) return;
 
     cartAdd(id);
