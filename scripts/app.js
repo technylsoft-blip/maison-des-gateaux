@@ -20,8 +20,10 @@ const CATALOG = {
   anniversaire: { name: "Gâteau d'Anniversaire",  price: 45   },
   mariage:      { name: "Gâteau de Mariage",       price: null },
   evenement:    { name: "Gâteau Événementiel",     price: 80   },
-  foret:        { name: "Forêt Noire",             price: 35   },
-  fraisier:     { name: "Fraisier",                price: 38   },
+  foret:          { name: "Forêt Noire",              price: 35   },
+  fraisier:       { name: "Fraisier",                 price: 38   },
+  'cake-topper':  { name: "Cake Topper Personnalisé", price: 2500 },
+  'figurine-gateau': { name: "Figurine pour Gâteaux", price: 3500 },
 };
 
 /* ────────────────────────────────────────────────────────────────

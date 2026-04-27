@@ -568,6 +568,29 @@ button { cursor: pointer; }
 
 
 /* ================================================================
+   IMPRESSION
+   ================================================================ */
+
+.impression {
+  padding-block: var(--section-py);
+  background:    var(--white);
+}
+
+.impression__grid {
+  display:               grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap:                   var(--gap-lg);
+  list-style:            none;
+  max-width:             760px;
+  margin-inline:         auto;
+}
+
+@media (max-width: 600px) {
+  .impression__grid { grid-template-columns: 1fr; }
+}
+
+
+/* ================================================================
    GALERIE
    ================================================================ */
 

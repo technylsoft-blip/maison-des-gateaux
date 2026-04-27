@@ -93,6 +93,7 @@
         <ul class="navbar__menu" id="navbar-menu" role="list">
           <li><a href="#a-propos"   class="navbar__link">À propos</a></li>
           <li><a href="#creations"  class="navbar__link">Nos Gâteaux</a></li>
+          <li><a href="#impression" class="navbar__link">Impression</a></li>
           <li><a href="#galerie"    class="navbar__link">Galerie</a></li>
           <li><a href="#commander"  class="navbar__link">Commander</a></li>
           <li><a href="#contact"    class="navbar__link">Contact</a></li>
@@ -514,7 +515,92 @@
 
 
     <!-- ═══════════════════════════════════════════════
-         6. GALERIE
+         6. IMPRESSION
+    ═══════════════════════════════════════════════ -->
+    <section class="impression" id="impression">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="overline" data-animate>Service personnalisé</span>
+          <h2 class="section-title" data-animate data-delay="1">Impression</h2>
+          <p class="section-subtitle" data-animate data-delay="2">
+            Apportez une touche unique à vos créations avec notre service d'impression
+            personnalisé pour pâtisserie. Nous réalisons des impressions de haute qualité
+            pour sublimer vos gâteaux et rendre chaque événement encore plus mémorable.
+          </p>
+        </div>
+
+        <ul class="impression__grid" role="list">
+
+          <!-- Cake topper -->
+          <li>
+            <article class="card" data-animate data-delay="1">
+              <div class="card__media">
+                <img src="assets/images/cake-topper.jpg"
+                     alt="Cake topper personnalisé"
+                     loading="lazy" decoding="async" width="600" height="500" />
+                <div class="card__overlay" aria-hidden="true">
+                  <span class="card__overlay-cta">Voir les options</span>
+                </div>
+                <span class="card__badge card__badge--nouveau">Nouveau</span>
+              </div>
+              <div class="card__body">
+                <span class="card__eyebrow">Impression · Décoration</span>
+                <h3 class="card__title">Cake Topper Personnalisé</h3>
+                <p class="card__desc">
+                  Des décorations élégantes et personnalisées pour mettre en valeur
+                  vos gâteaux d'anniversaire, mariages ou célébrations spéciales.
+                </p>
+                <div class="card__footer">
+                  <div class="card__price-wrap">
+                    <span class="card__price-from">À partir de</span>
+                    <span class="card__price">2 500 FCFA</span>
+                  </div>
+                  <button class="btn btn--primary btn--sm"
+                          data-cart-add="cake-topper" type="button">+ Ajouter</button>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <!-- Figurine -->
+          <li>
+            <article class="card" data-animate data-delay="2">
+              <div class="card__media">
+                <img src="assets/images/figurine-gateau.jpg"
+                     alt="Figurine décorative pour gâteau"
+                     loading="lazy" decoding="async" width="600" height="500" />
+                <div class="card__overlay" aria-hidden="true">
+                  <span class="card__overlay-cta">Voir les options</span>
+                </div>
+                <span class="card__badge card__badge--nouveau">Nouveau</span>
+              </div>
+              <div class="card__body">
+                <span class="card__eyebrow">Impression · Figurine</span>
+                <h3 class="card__title">Figurine pour Gâteaux</h3>
+                <p class="card__desc">
+                  Des figurines décoratives adaptées à vos thèmes pour une finition
+                  originale et raffinée.
+                </p>
+                <div class="card__footer">
+                  <div class="card__price-wrap">
+                    <span class="card__price-from">À partir de</span>
+                    <span class="card__price">3 500 FCFA</span>
+                  </div>
+                  <button class="btn btn--primary btn--sm"
+                          data-cart-add="figurine-gateau" type="button">+ Ajouter</button>
+                </div>
+              </div>
+            </article>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         7. GALERIE
     ═══════════════════════════════════════════════ -->
     <section class="galerie bg-beige bg-grain" id="galerie">
       <div class="container">
