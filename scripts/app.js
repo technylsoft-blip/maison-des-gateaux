@@ -40,8 +40,12 @@ const CATALOG = {
   communion:     { name: "Gâteau de Communion",                  price: 15000 },
   pate_evenement:{ name: "Gâteau Pâte à Sucre Événement",        price: null  },
   /* ── Impression ── */
-  caketopper:    { name: "Cake Topper Personnalisé",             price: 2500  },
-  figurine:      { name: "Figurine pour Gâteaux",                price: 3500  },
+  caketopper:          { name: "Cake Topper Personnalisé",             price: 2500  },
+  figurine:            { name: "Figurine pour Gâteaux",                price: 3500  },
+  initiales_gateau:    { name: "Initiales pour Gâteaux",               price: 5000  },
+  topper_mariage:      { name: "Topper pour Mariage",                  price: 5000  },
+  topper_anniversaire: { name: "Topper Anniversaire",                  price: 5000  },
+  photo_comestible:    { name: "Photo Comestible Personnalisée",        price: 5000  },
 };
 
 /* ────────────────────────────────────────────────────────────────
