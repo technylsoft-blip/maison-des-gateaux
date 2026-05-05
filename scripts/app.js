@@ -93,9 +93,11 @@ function initNavbar() {
   const navLinks = document.querySelectorAll('.navbar__link');
   const sections = document.querySelectorAll('main section[id]');
   if (navLinks.length && sections.length) {
-    const setActive = id => navLinks.forEach(l =>
-      l.classList.toggle('is-active', l.getAttribute('href') === `#${id}`)
-    );
+    const setActive = id => navLinks.forEach(l => {
+      const active = l.getAttribute('href') === `#${id}`;
+      l.classList.toggle('is-active', active);
+      l.setAttribute('aria-current', active ? 'true' : 'false');
+    });
     const sectionObs = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
     }, { rootMargin: '-45% 0px -50% 0px' });
