@@ -65,9 +65,22 @@ a, button, [role="button"] { touch-action: manipulation; }
 
 /* Transparent sur le hero — devient blanc/opaque au scroll */
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.97);
   box-shadow: var(--shadow-sm);
+}
+
+/*
+  backdrop-filter déplacé sur ::before pour éviter qu'il crée un
+  nouveau containing block pour les enfants position:fixed (menu mobile).
+  Le pseudo-élément ne participent pas aux containing blocks des descendants DOM.
+*/
+.navbar.scrolled::before {
+  content:         '';
+  position:        absolute;
+  inset:           0;
+  background:      rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(8px);
+  pointer-events:  none;
+  z-index:         -1;
 }
 
 .navbar__inner {
